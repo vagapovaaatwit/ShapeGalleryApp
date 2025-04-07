@@ -15,7 +15,14 @@ public class MyRectangle extends MyShape {
         Rectangle rect = new Rectangle(x, y, 60, 40);
         rect.setFill(Color.FORESTGREEN);
         pane.getChildren().add(rect);
-        
-        addLabel(pane, "Rectangle");
+    }
+
+    @Override
+    public void highlight(Pane pane) {
+        Rectangle rect = new Rectangle(x, y, 60, 40);
+        rect.setFill(Color.FORESTGREEN);
+        rect.setStroke(Color.RED);  // Add a red border for highlighting
+        rect.setStrokeWidth(3);
+        pane.getChildren().add(rect);
     }
 }
