@@ -14,7 +14,13 @@ public class MyCircle extends MyShape {
     public void draw(Pane pane) {
         Circle circle = new Circle(x, y, 30, Color.DODGERBLUE);
         pane.getChildren().add(circle);
-        
-        addLabel(pane, "Circle");
+    }
+
+    @Override
+    public void highlight(Pane pane) {
+        Circle circle = new Circle(x, y, 30, Color.DODGERBLUE);
+        circle.setStroke(Color.RED);  // Add a red border for highlighting
+        circle.setStrokeWidth(3);
+        pane.getChildren().add(circle);
     }
 }
